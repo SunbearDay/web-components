@@ -1,33 +1,28 @@
-# Web Components
+# js-web-components
 
-## Basic Custom Element
+Web components are a set of web platform API's that allow us to create custom, reusable and encapsulated HTML elements.
+
+Web components are utilized using three technologies:
+
+- Custom Elements - Allow us to create custom HTML elements and define their behavior.
+- Shadow DOM - Allows us to encapsulate our web component in a separate DOM that is only used by our component.
+- HTML Templates - These use `<template>` and `<slot>` elements to define the markup of our web component.
+
+Basic Custom Element:
 
 ```html
-<user-card></user-card>
+<user-card name="Alice Adams">
+
+</user-card>
 ```
 
 ```js
 class UserCard extends HTMLElement {
     constructor() {
         super()
-        this.innerHTML = `John Doe`
-    }
-}
-
-window.customElements.define('user-card', UserCard)
-```
-
-## Add an Attribute
-
-```html
-<user-card name='Alice Adams'></user-card>
-```
-
-```js
-class UserCard extends HTMLElement {
-    constructor() {
-        super()
-        this.innerHTML = `${this.getAttribute('name')}`
+        this.innerHTML = `
+            <h3>${this.getAttribute('name')}</h3>
+        `
     }
 }
 

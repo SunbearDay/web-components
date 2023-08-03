@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="EN">
+
 <head>
     <meta charset="utf-8">
     <title>Editable List | Web Components</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script defer src="main.js"></script>
+    <script defer src="user-card.js"></script>
 </head>
+
 <body>
 
     <h3>Web Components</h3>
 
-    <user-card 
-        name="Alice Adams"
-        avatar="https://randomuser.me/api/portraits/women/1.jpg">
+    <user-card name="Alice Adams" avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="email">me@alice.com</div>
+        <div slot="phone">123-555-4567</div>
     </user-card>
 
-    <user-card 
-    name="Adam Adams"
-    avatar="https://randomuser.me/api/portraits/men/1.jpg">
-</user-card>
+    <user-card name="Adam Ash" avatar="https://randomuser.me/api/portraits/men/1.jpg">
+        <div slot="email">me@adam.com</div>
+        <div slot="phone">223-555-4567</div>
+    </user-card>
+
+
 
 </body>
+
 </html>
